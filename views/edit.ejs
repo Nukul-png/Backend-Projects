@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>Edit User</h2>
+    <form method="POST" action="/users/<%=user.id%>?_method=PATCH">
+        <input type="text" name="username" value="<%=user.username%>" required>
+        <input type="email" name="email" value="<%=user.email%>" required>
+        <input type="password" name="password" placeholder="Enter Password to confirm" required>
+        <button type="submit">Update</button>
+    </form> -->
+    <h2>Edit User</h2>
+    <form method="POST" action="/users/<%=user.id%>?_method=PATCH">
+        <input type="text" name="username" value="<%=user.username%>" required>
+        <input type="email" name="email" value="<%=user.email%>" required>
+        <input type="password" name="password" placeholder="Enter Password to confirm">
+        <button type="submit">update</button>
+    </form>
+</body>
+</html>
