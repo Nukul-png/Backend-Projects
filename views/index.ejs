@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Twitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Twitter</h1>
+    <h3>See all Posts</h3>
+    <div class="container">
+        <% for (let tweet of tweets){ %>
+            <div class="tweet">
+                <h3>@<%= tweet.username %></h3>
+                <p><%= tweet.content %></p>
+
+                <a href="/tweets/<%= tweet.id %>">View in detail</a>
+
+                <br><br>
+
+                <form action="/tweets/<%= tweet.id %>?_method=DELETE" method="POST">
+                    <button>Delete Post</button>
+                </form>
+
+                <!--Update route-->
+                <form action="/tweets/<%=tweet.id%>/edit" method="get">
+                    <button>Update Post</button>
+                </form>
+            </div>
+            
+        <% } %>
+        <a href="/tweets/new" class="newTweet">Create tweet</a>
+    </div>
+</body>
+</html>

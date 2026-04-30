@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Tweet</title>
+</head>
+<body>
+    <h3>Edit the route</h3>
+    <form action="/tweets/<%=tweet.id%>?_method=PATCH" method="POST">
+        <input name="username" type="text" value="<%=tweet.username%>"">
+        <input name="content" type="text" value="<%=tweet.content%>"">
+        <button>Update</button>
+    </form>
+</body>
+</html>
